@@ -44,7 +44,7 @@ int initialise_core() {
 
             case SI_FILE:
                 if (errno == 2) {
-                    CLogger::warning("Configuration file not found, trying to create a new one");
+                    CLogger::warning("Configuration file not found, trying to create a new one...");
                     ofstream file;
                     file.open("py_config.ini", ios::out);
                     if (!file) {
@@ -126,6 +126,10 @@ int initialise_core() {
                     return false;
                 }
             }
+        }
+        else {
+            CLogger::warning("No modules were found to be imported in the configuration file!");
+            return false;
         }
     }
     return true;
