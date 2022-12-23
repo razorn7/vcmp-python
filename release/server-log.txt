@@ -1,0 +1,17 @@
+                                                                                                                        
+ Vice City Multiplayer Server                                                                                           
+ -------------------------------                                                                                        
+ v0.4, (c) 2007-2014 VC:MP Team                                                                                         
+                                                                                                                        
+[script] Loading Python module for VC:MP 0.4...                                                                         
+[script] Author: razorn7 (C) 2022                                                                                       
+                                                                                                                        
+[debug] Configuration: Debug messages has been enabled.                                                                 
+[debug] Configuration: Logging file has been created.                                                                   
+[debug] Event Manager: The event 'on_player_connect' has been bound.                                                    
+[debug] Event Manager: The event 'on_player_key_press' has been bound.                                                  
+[debug] Event Manager: The event 'on_player_module_list' has been bound.                                                
+[debug] Event Manager: The event 'on_player_spawn' has been bound.                                                      
+[debug] Python Module: The module 'scripts' has been imported.                                                          
+[debug] Core: The module has been initialised!                                                                          
+                                                                                                                        
