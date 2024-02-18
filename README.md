@@ -14,18 +14,23 @@ After completing the step above, a configuration file named `pyconfig.ini` will 
 - Example of the configuration file:
 ```ini
 [settings]
-# This option enables/disables debug messages
+# Toggle debug messages [false/true]
 debug_messages = false
-# This option enables/disables the plugin logger
+
+# Toggle plugin logger [false/true]
 enable_logger = true
-# This option defines the file the logger will write to
-logger_file=server.log
-# This option enables/disables the visualization of data and time at which the line is written to the logger
+
+# Defines the name of the file wich logger will write to
+logger_file = server.log
+
+# Toggle whether the date and time on which the log line to be written will be shown
 logger_timestamp = false
-# This option defines the data format and time of the logger [2024-01-01 00:00:00]
+
+# Defines the format in which the date and time is shown
+# The format below means [2024-01-01 00:00:00]
 logger_timestamp_format = [%Y-%m-%d %X]
 
-# Below will be listed the modules you want to import into your project
+# Here will be listed the modules you want to import into your environment
 [modules]
 # moduleName = [false/true] (false: will not be imported | true: will be imported)
 scripts = true
