@@ -2,6 +2,13 @@
 # Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/Python VCMP/v16
-/i
-/release/plugins
+/.vs
+/bin/plugins/i
+/bin/plugins/python04rel64.exp
+/bin/plugins/python04rel64.lib
+/bin/plugins/python04rel64.pdb
+/bin/scripts/__pycache__
+/bin/server.log
+/bin/server.txt
+/bin/server64.exe
+/bin/server_log.txt
