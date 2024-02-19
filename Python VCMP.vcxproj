@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|x64">
       <Configuration>Release</Configuration>
@@ -19,37 +11,36 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="vcmp_wrapper\callbacks\callbacks.cpp" />
-    <ClCompile Include="vcmp_wrapper\classes\entity\checkpoint.cpp" />
-    <ClCompile Include="vcmp_wrapper\classes\entity\object.cpp" />
-    <ClCompile Include="vcmp_wrapper\classes\entity\pickup.cpp" />
-    <ClCompile Include="vcmp_wrapper\classes\utility\console.cpp" />
-    <ClCompile Include="vcmp_wrapper\classes\utility\event_manager.cpp" />
-    <ClCompile Include="vcmp_wrapper\classes\generic\game.cpp" />
-    <ClCompile Include="vcmp_wrapper\classes\generic\key.cpp" />
-    <ClCompile Include="vcmp_wrapper\classes\entity\player.cpp" />
-    <ClCompile Include="vcmp_wrapper\classes\generic\server.cpp" />
-    <ClCompile Include="vcmp_wrapper\classes\generic\stream.cpp" />
-    <ClCompile Include="vcmp_wrapper\classes\utility\utility.cpp" />
-    <ClCompile Include="vcmp_wrapper\classes\entity\vehicle.cpp" />
+    <ClCompile Include="vcmp-python\core.cpp" />
+    <ClCompile Include="vcmp-python\vcmp\callbacks\callbacks.cpp" />
+    <ClCompile Include="vcmp-python\vcmp\classes\entity\checkpoint.cpp" />
+    <ClCompile Include="vcmp-python\vcmp\classes\entity\object.cpp" />
+    <ClCompile Include="vcmp-python\vcmp\classes\entity\pickup.cpp" />
+    <ClCompile Include="vcmp-python\vcmp\classes\entity\player.cpp" />
+    <ClCompile Include="vcmp-python\vcmp\classes\entity\vehicle.cpp" />
+    <ClCompile Include="vcmp-python\vcmp\classes\generic\game.cpp" />
+    <ClCompile Include="vcmp-python\vcmp\classes\generic\key.cpp" />
+    <ClCompile Include="vcmp-python\vcmp\classes\generic\server.cpp" />
+    <ClCompile Include="vcmp-python\vcmp\classes\generic\stream.cpp" />
+    <ClCompile Include="vcmp-python\vcmp\classes\utility\console.cpp" />
+    <ClCompile Include="vcmp-python\vcmp\classes\utility\event_manager.cpp" />
+    <ClCompile Include="vcmp-python\vcmp\classes\utility\utility.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="main.h" />
-    <ClInclude Include="vcmp_wrapper\callbacks\callbacks.h" />
-    <ClInclude Include="vcmp_wrapper\classes\entity\checkpoint.h" />
-    <ClInclude Include="vcmp_wrapper\classes\entity\object.h" />
-    <ClInclude Include="vcmp_wrapper\classes\entity\pickup.h" />
-    <ClInclude Include="vcmp_wrapper\classes\utility\console.h" />
-    <ClInclude Include="vcmp_wrapper\classes\utility\event_manager.h" />
-    <ClInclude Include="vcmp_wrapper\classes\generic\game.h" />
-    <ClInclude Include="vcmp_wrapper\classes\generic\key.h" />
-    <ClInclude Include="vcmp_wrapper\classes\entity\player.h" />
-    <ClInclude Include="vcmp_wrapper\classes\generic\server.h" />
-    <ClInclude Include="vcmp_wrapper\classes\generic\stream.h" />
-    <ClInclude Include="vcmp_wrapper\classes\utility\utility.h" />
-    <ClInclude Include="vcmp_wrapper\classes\entity\vehicle.h" />
-    <ClInclude Include="vcmp_wrapper\sdk\vcmp_constants.h" />
+    <ClInclude Include="vcmp-python\core.h" />
+    <ClInclude Include="vcmp-python\vcmp\callbacks\callbacks.h" />
+    <ClInclude Include="vcmp-python\vcmp\classes\entity\checkpoint.h" />
+    <ClInclude Include="vcmp-python\vcmp\classes\entity\pickup.h" />
+    <ClInclude Include="vcmp-python\vcmp\classes\entity\player.h" />
+    <ClInclude Include="vcmp-python\vcmp\classes\entity\vehicle.h" />
+    <ClInclude Include="vcmp-python\vcmp\classes\generic\game.h" />
+    <ClInclude Include="vcmp-python\vcmp\classes\generic\server.h" />
+    <ClInclude Include="vcmp-python\vcmp\classes\generic\stream.h" />
+    <ClInclude Include="vcmp-python\vcmp\classes\utility\console.h" />
+    <ClInclude Include="vcmp-python\vcmp\classes\utility\event_manager.h" />
+    <ClInclude Include="vcmp-python\vcmp\classes\utility\utility.h" />
+    <ClInclude Include="vcmp-python\vcmp\sdk\constants.h" />
+    <ClInclude Include="vcmp-python\vcmp\sdk\vcmp.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -59,29 +50,17 @@
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -90,57 +69,27 @@
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>C:\Users\Razor\AppData\Local\Programs\Python\Python311\libs;$(LibraryPath)</LibraryPath>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>C:\Users\Razor\Desktop\Python VCMP\release\plugins</OutDir>
-    <IntDir>C:\Users\Razor\Desktop\Python VCMP\i\</IntDir>
+    <OutDir>$(SolutionDir)\bin\plugins</OutDir>
+    <IntDir>$(SolutionDir)\bin\plugins\i</IntDir>
     <TargetName>python04rel32</TargetName>
     <LibraryPath>C:\Python\Python311\libs;$(VC_LibraryPath_x86);</LibraryPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <LibraryPath>C:\Python\Python311\libs;$(LibraryPath)</LibraryPath>
-    <OutDir>C:\Users\Razor\Desktop\Python VCMP\release\plugins</OutDir>
+    <OutDir>$(SolutionDir)\bin\plugins</OutDir>
     <TargetName>python04rel64</TargetName>
-    <IntDir>C:\Users\Razor\Desktop\Python VCMP\i\</IntDir>
+    <IntDir>$(SolutionDir)\bin\plugins\i</IntDir>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;PYTHONVCMP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\Razor\AppData\Local\Programs\Python\Python311\include;C:\Users\Razor\Desktop\Python VCMP\pybind-pybind11-bcee506\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <Link>
-      <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>python311.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -153,7 +102,7 @@
       </PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Python\Python311\include;C:\Users\Razor\Desktop\Python VCMP\vendor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Python\Python311\include;C:\Users\Razor\Desktop\repos\vcmp-python\vcmp-python\vendor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -161,23 +110,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>C:\Python\Python311\libs\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>python311.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;PYTHONVCMP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-    </ClCompile>
-    <Link>
-      <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>C:\Users\Razor\AppData\Local\Programs\Python\Python312\libs</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -192,7 +125,7 @@
       </PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Python\Python311\include;C:\Users\Razor\Desktop\Python VCMP\vendor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Python\Python311\include;C:\Users\Razor\Desktop\repos\vcmp-python\vcmp-python\vendor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderOutputFile>/</PrecompiledHeaderOutputFile>
     </ClCompile>
     <Link>
@@ -201,6 +134,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>C:\Python\Python311\libs</AdditionalLibraryDirectories>
+      <AdditionalDependencies>python311.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
