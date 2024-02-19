@@ -12,7 +12,7 @@ Event.bind("on_server_initialise", on_server_initialise)
 
 ## Setting up the environment
 ### First steps
-To setup the plugin on your desired server, simply [download]() the latest version of the plugin, place it in the `plugins/` folder on your server and launch `server64.exe`.
+To setup the plugin on your desired server, simply [download](https://github.com/razorn7/vcmp-python/releases) the latest version of the plugin, place it in the `plugins/` folder on your server and launch `server64.exe`.
 - Or just [get]() this blank server with everything prepared! (you will need to download the server executable separately).
 
 ### Configuration file
