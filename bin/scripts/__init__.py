@@ -59,6 +59,7 @@ def on_server_initialise():
         Logger.info( "Password: " + Settings.password)
 
     Logger.info("------------------------------------")
+    print("Hello world!")
 
 def on_server_shutdown():
     pass

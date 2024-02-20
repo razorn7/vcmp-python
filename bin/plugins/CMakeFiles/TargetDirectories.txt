@@ -1,0 +1,3 @@
+C:/Users/Razor/Desktop/repos/vcmp-python/bin/plugins/CMakeFiles/vcmp-python.dir
+C:/Users/Razor/Desktop/repos/vcmp-python/bin/plugins/CMakeFiles/edit_cache.dir
+C:/Users/Razor/Desktop/repos/vcmp-python/bin/plugins/CMakeFiles/rebuild_cache.dir
