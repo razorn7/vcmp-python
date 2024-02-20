@@ -1,7 +1,0 @@
-﻿################################################################################
-# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
-################################################################################
-
-/.vs/Python VCMP/v16
-/i
-/release/plugins
